@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website bản thân</title>
+    <style>
+        h1{
+            text-align:center;
+            font-family:'Times New Roman', Times, serif;
+            font-size:45px;
+            color:cadetblue;
+        }
+        body{
+            background-image:url(./IMG_20230608_193144.jpg)
+        }
+        img{
+            height: 456px;
+            width:600px;
+            margin-left:45px;
+            margin-right:30px;
+            margin-top:60px;
+            border-radius:45%;
+            border-top-left-radius: 35%;
+        }
+        .flex-container{
+            display:322px;
+            margin-right:34px;
+            margin-left:45px;
+        }
+        .flex-container>div{
+            margin-left:45px;
+            color:blueviolet;
+            font-family:'Times New Roman', Times, serif;
+            font-size:56px;
+        }
+        dark-mode{width:66px}
+            .toggle,.mode{position:relative;float:right;outline:0;border:0;padding:0;overflow:hidden;cursor:pointer}
+            .toggle{margin-left:10px;border-radius:10px;width:33px;height:20px}
+            .toggle,.mode::before,.dark .mode::after{background:#ccc}
+            .dark .toggle{background:#444}
+            .auto .toggle{background:#6d6!important}
+            .toggle::before,.mode::before,.mode::after{position:absolute;content:''}
+            .toggle::before{top:1px;left:1px;transition:.4s;background:#fff;width:18px;height:18px}
+            .auto .toggle::before{left:14px}
+            .toggle::before,.mode,.mode::before,.mode::after{border-radius:50%}
+            .dark .mode{top:2px;left:-2px;overflow:visible}
+            .dark .mode,.dark .mode::before{border-radius:0}
+            .mode,.dark .mode::before,.mode::after{background:#999}
+            .mode{width:20px;height:20px}
+            .dark .mode,.mode::before,.mode::after{width:16px;height:16px}
+            .mode::before{top:2px;left:2px}
+            .dark .mode::before{top:0;left:0;transform:rotate(45deg)}
+            .mode::after{top:-3px;left:7px}
+            .dark .mode::after{top:1px;left:1px;width:14px;height:14px}
+        .header{
+            background-color:#ddd;
+            color:#000;
+        }
+        .header{
+            background-color:#ddd;
+            color:#000;
+        }
+        .dark .header{
+            background-color:#0c040479;
+            color:#eeeeee00;
+        }
+    </style>
+    <script>
+        //<![CDATA[
+        /*
+        Dark mode made by duy-pham.blogspot.com
+        */
+        function auto(){document.body.classList.add('auto');localStorage.setItem('333835auto','true');if(new Date().getHours()>21||new Date().getHours()<7){document.body.classList.add('dark');localStorage.setItem('333835dark','true')}else{document.body.classList.remove('dark');localStorage.setItem('333835dark','false')}}function dark(){localStorage.getItem('333835dark')=='true'?document.body.classList.add('dark'):document.body.classList.remove('dark')}if(localStorage.getItem('333835auto')=='true'){auto()}else{localStorage.getItem('333835dark')==null?auto():dark()}function toggle(){localStorage.setItem('333835auto',localStorage.getItem('333835auto')=='true'?'false':'true');localStorage.getItem('333835auto')=='true'?auto():document.body.classList.remove('auto')}function mode(){document.body.classList.remove('auto');localStorage.removeItem('333835auto');localStorage.setItem('333835dark',localStorage.getItem('333835dark')=='true'?'false':'true');dark()}
+    </script>
+</head>
+<body>
+    <div class='dark-mode'>
+        <button class='toggle' onclick='toggle()' type='button'/>
+        <button class='mode' onclick='mode()' type='button'/>
+    </div>
+    <h1>TRANG WEB GIỚI THIỆU BẢN THÂN VÀ TÌNH CẢM LIVE!</h1>
+    <h2 align="center" style="font-family:'Times New Roman', Times, serif;font-size:34px;color:chocolate;"> Nghiêm cấm sao chép trang web dưới mọi hình thức!</h2>
+    <div class="flex-container">
+        <div>
+            <img src="./354143211_1687748038388370_7320924906200763046_n.jpg">
+            <p> Xin chào, đây là hình ảnh kỷ niệm đầy thủ thỉ khi tôi đỡ ngứa</p>
+        </div>
+        <div>
+            <img src="./354446368_3543004402597216_1859654653676175447_n.jpg">
+        </div>
+        <div>
+            <img src="./354453931_3543004119263911_8789119668548949191_n.jpg">
+        </div>
+    </div>
+</body>
+</html>
