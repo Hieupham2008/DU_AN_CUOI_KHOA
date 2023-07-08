@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .green-strip
+        {   width:0%;           
+            height: 30px;       
+            background-color:rgb(24, 32, 103);
+            animation-name: progress-bar;           
+            animation-duration: 300s;  
+            animation-iteration-count: infinite; 
+        }
+
+        @keyframes progress-bar { 
+            from{width:0%} 
+            to{width:100%} 
+        }
+        .black-strip
+        {   width:100%;
+            height: 30px;       
+            background-color:black; 
+        }
+    </style>
+</head>
+<body>
+    <div class="black-strip">
+        <div class="green-strip">
+        </div>
+   </div>
+   <h1> Vui lòng đợi, đang đăng nhập...</h1>
+</body>
+</html>
